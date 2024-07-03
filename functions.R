@@ -55,5 +55,10 @@ centrer_vecteur <- function(x) {
 matrice_correlation <- function(df) {
   return(cor(df, use = "complete.obs"))
 }
-
+# Ajout d'une fonction variance par lineker
+calculate_variance <- function(x) {
+  n <- length(x)
+  mean_x <- mean(x)
+  variance <- sum((x - mean_x)^2) / (n - 1)
+  return(variance)
 
